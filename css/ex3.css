@@ -16,7 +16,7 @@ body{
 
 a{
     text-decoration: none;
-    color: rgba(87, 117, 144, 1);
+    color: rgb(85, 168, 241);
     display: inline-block;
 }
 
@@ -75,7 +75,7 @@ nav a:hover{
     position: relative;   
     width: 100%;
     height: 90vh;
-    background:rgba(87, 117, 144, .2);
+    background:rgba(140, 200, 252, 0.2);
 }
 
 .hero img{
@@ -87,13 +87,49 @@ nav a:hover{
 
 .hero h1{
     position: absolute;
-    top:20%;
+    top:70%;
 	left:50%;
 	transform: translate(-50%, -50%);
 
     font-size: 150px;
-    color: rgba(87, 117, 144, 1);
+    color: rgb(181, 210, 235);
 }
+
+/*marquee*/
+.marquee{
+    width: 100%;
+    overflow: hidden;
+    background: rgb(196, 250, 250);
+    color: rgb(111, 107, 234);
+    padding: 20px 0;
+}
+
+.marquee-track{
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+
+
+
+
+@keyframes marquee{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-content{
+    flex-shrink: 0;
+    padding-right: 0px;
+    white-space: nowrap;
+    font-size: max(1.5rem, 1vw); 
+}
+
 
 /*section*/
 section{
@@ -121,7 +157,7 @@ section h1{
 
 .card img{
 	width:80%;
-	border-radius:50%;
+	border-radius:70%;
 	border:solid 1px rgba(87, 117, 144, 1);
     
 	-ms-transform: rotate(0deg); /* IE 9 */
@@ -148,8 +184,8 @@ article{
     box-sizing: border-box;
 
     display:flex;
+    overflow: hidden;
 }
-
 section > a:nth-of-type(2n) article{
     flex-direction: row-reverse;
 }
